@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.1.5
+%define		kdeplasmaver	6.2.0
 %define		qtver		5.15.2
 %define		kpname		plasma5support
 %define		kf6ver		5.39.0
 
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
-Version:	6.1.5
+Version:	6.2.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	d2abaa1df3af5b787255eafd73b9a1b6
+# Source0-md5:	98630b74689f0196907ffa19f6349a0f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
@@ -101,6 +101,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories6/plasma5support.categories
 %{_datadir}/qlogging-categories6/plasma5support.renamecategories
 %{_datadir}/plasma5support/services/modifierkeystate.operations
+%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_hotplug.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_soliddevice.so
+%{_datadir}/plasma5support/services/hotplug.operations
+%{_datadir}/plasma5support/services/soliddevice.operations
+
 
 %files devel
 %defattr(644,root,root,755)
