@@ -9,7 +9,7 @@
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
 Version:	6.2.1
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -91,6 +91,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/libplasma5supportplugin.so
 %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/plasma5supportplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/qmldir
+%dir %{_libdir}/qt6/plugins/plasma5support
+%dir %{_libdir}/qt6/plugins/plasma5support/dataengine
 %attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_devicenotifications.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_keystate.so
 %dir %{_datadir}/plasma5support
