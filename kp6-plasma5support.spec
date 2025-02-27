@@ -26,6 +26,7 @@ BuildRequires:	kf6-kdbusaddons-devel >= 5.82
 BuildRequires:	kf6-kdeclarative-devel >= 5.82
 BuildRequires:	kf6-kguiaddons-devel >= 5.85.0
 BuildRequires:	kf6-ki18n-devel >= 5.82
+BuildRequires:	kf6-kidletime-devel >= 5.85.0
 BuildRequires:	kf6-kio-devel >= 5.82
 BuildRequires:	kf6-knotifications-devel >= 5.82
 BuildRequires:	kf6-kservice-devel >= 5.85.0
