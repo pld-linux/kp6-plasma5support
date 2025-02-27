@@ -30,8 +30,10 @@ BuildRequires:	kf6-kidletime-devel >= 5.85.0
 BuildRequires:	kf6-kio-devel >= 5.82
 BuildRequires:	kf6-knotifications-devel >= 5.82
 BuildRequires:	kf6-kservice-devel >= 5.85.0
+BuildRequires:	kf6-networkmanager-qt-devel >= 5.85.0
 BuildRequires:	kf6-solid-devel >= 5.85.0
 BuildRequires:	kp6-libksysguard-devel
+BuildRequires:	kp6-plasma-activities-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.164
