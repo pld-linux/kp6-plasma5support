@@ -9,7 +9,7 @@
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
 Version:	6.3.1
-Release:	2
+Release:	3
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -24,6 +24,7 @@ BuildRequires:	kf6-kauth-devel >= 5.82
 BuildRequires:	kf6-kcoreaddons-devel >= 5.85.0
 BuildRequires:	kf6-kdbusaddons-devel >= 5.82
 BuildRequires:	kf6-kdeclarative-devel >= 5.82
+BuildRequires:	kf6-kguiaddons-devel >= 5.85.0
 BuildRequires:	kf6-ki18n-devel >= 5.82
 BuildRequires:	kf6-kio-devel >= 5.82
 BuildRequires:	kf6-knotifications-devel >= 5.82
