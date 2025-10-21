@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kpname		plasma5support
 %define		kf6ver		5.39.0
 
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	cb912964a447b2886f6893a4cc2d5c43
+# Source0-md5:	ea2fa87571ef432211dd2df2ae102d93
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
@@ -91,17 +91,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f libplasma5support.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libPlasma5Support.so.*.*
+%{_libdir}/libPlasma5Support.so.*.*
 %ghost %{_libdir}/libPlasma5Support.so.6
+%ghost %{_libdir}/libweather_ion.so.7
+%{_libdir}/libweather_ion.so.*.*
 %dir %{_libdir}/qt6/qml/org/kde/plasma/plasma5support
 %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/kde-qmlmodule.version
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/libplasma5supportplugin.so
+%{_libdir}/qt6/qml/org/kde/plasma/plasma5support/libplasma5supportplugin.so
 %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/plasma5supportplugin.qmltypes
 %{_libdir}/qt6/qml/org/kde/plasma/plasma5support/qmldir
 %dir %{_libdir}/qt6/plugins/plasma5support
 %dir %{_libdir}/qt6/plugins/plasma5support/dataengine
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_devicenotifications.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_keystate.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_devicenotifications.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_keystate.so
 %dir %{_datadir}/plasma5support
 %dir %{_datadir}/plasma5support/services
 %{_datadir}/plasma5support/services/dataengineservice.operations
@@ -110,22 +112,28 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/qlogging-categories6/plasma5support.categories
 %{_datadir}/qlogging-categories6/plasma5support.renamecategories
 %{_datadir}/plasma5support/services/modifierkeystate.operations
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_hotplug.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_soliddevice.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_hotplug.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_soliddevice.so
 %ghost %{_libdir}/libplasma-geolocation-interface.so.6
-%attr(755,root,root) %{_libdir}/libplasma-geolocation-interface.so.*.*
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_activities.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_apps.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_favicons.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_filebrowser.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_geolocation.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_mouse.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_packagekit.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_places.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_powermanagement.so
+%{_libdir}/libplasma-geolocation-interface.so.*.*
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_activities.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_apps.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_bbcukmet.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_dwd.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_envcan.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_favicons.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_filebrowser.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_geolocation.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_mouse.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_noaa.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_packagekit.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_places.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_powermanagement.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_weather.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_wettercom.so
 %dir %{_libdir}/qt6/plugins/plasma5support/geolocationprovider
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/geolocationprovider/plasma-geolocation-gps.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma5support/geolocationprovider/plasma-geolocation-ip.so
+%{_libdir}/qt6/plugins/plasma5support/geolocationprovider/plasma-geolocation-gps.so
+%{_libdir}/qt6/plugins/plasma5support/geolocationprovider/plasma-geolocation-ip.so
 %{_datadir}/plasma5support/services/hotplug.operations
 %{_datadir}/plasma5support/services/soliddevice.operations
 %{_datadir}/plasma5support/services/activities.operations
@@ -133,11 +141,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plasma5support/services/org.kde.places.operations
 %{_datadir}/plasma5support/services/packagekit.operations
 %{_datadir}/plasma5support/services/powermanagementservice.operations
+%{_datadir}/plasma/weather_legacy
 
 %files devel
 %defattr(644,root,root,755)
 %{_includedir}/Plasma5Support
 %{_includedir}/plasma
+%{_includedir}/plasma5support
 %{_libdir}/cmake/Plasma5Support
 %{_libdir}/libPlasma5Support.so
 %{_libdir}/libplasma-geolocation-interface.so
+%{_libdir}/libweather_ion.so
