@@ -9,7 +9,7 @@
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
 Version:	6.5.3
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
@@ -30,6 +30,7 @@ BuildRequires:	kf6-kidletime-devel >= 5.85.0
 BuildRequires:	kf6-kio-devel >= 5.82
 BuildRequires:	kf6-knotifications-devel >= 5.82
 BuildRequires:	kf6-kservice-devel >= 5.85.0
+BuildRequires:	kf6-kunitconversion-devel >= 5.82
 BuildRequires:	kf6-networkmanager-qt-devel >= 5.85.0
 BuildRequires:	kf6-solid-devel >= 5.85.0
 BuildRequires:	kp6-libksysguard-devel
