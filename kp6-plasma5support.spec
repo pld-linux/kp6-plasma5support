@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.5.5
+%define		kdeplasmaver	6.6.0
 %define		qtver		5.15.2
 %define		kpname		plasma5support
 %define		kf6ver		5.39.0
 
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
-Version:	6.5.5
-Release:	2
+Version:	6.6.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	9e74b4b6126cfefce49b280a3deb35ae
+# Source0-md5:	465c31279d1fd6aa29855b777da5e9c7
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
@@ -132,6 +132,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_powermanagement.so
 %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_weather.so
 %{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_wettercom.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_executable.so
+%{_libdir}/qt6/plugins/plasma5support/dataengine/plasma_engine_time.so
 %dir %{_libdir}/qt6/plugins/plasma5support/geolocationprovider
 %{_libdir}/qt6/plugins/plasma5support/geolocationprovider/plasma-geolocation-gps.so
 %{_libdir}/qt6/plugins/plasma5support/geolocationprovider/plasma-geolocation-ip.so
@@ -143,6 +145,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plasma5support/services/packagekit.operations
 %{_datadir}/plasma5support/services/powermanagementservice.operations
 %{_datadir}/plasma/weather_legacy
+%{_datadir}/plasma5support/services/statusnotifieritem.operations
 
 %files devel
 %defattr(644,root,root,755)
