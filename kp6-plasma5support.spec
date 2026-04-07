@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.6.3
+%define		kdeplasmaver	6.6.4
 %define		qtver		5.15.2
 %define		kpname		plasma5support
 %define		kf6ver		5.39.0
 
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
-Version:	6.6.3
-Release:	2
+Version:	6.6.4
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	008fdeff7f14152309ef43987e5d7315
+# Source0-md5:	21f6197e330e005d84bb95825ba116b0
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
