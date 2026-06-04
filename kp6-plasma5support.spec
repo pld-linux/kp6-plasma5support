@@ -46,7 +46,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		qt6dir		%{_libdir}/qt6
 
 %description
-plasma 5 support
+Plasma 5 support.
+
+%description -l pl.UTF-8
+Wsparcie dla Plazmy 5.
 
 %package devel
 Summary:	Header files for %{kpname} development
