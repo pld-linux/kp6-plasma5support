@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.6.5
+%define		kdeplasmaver	6.7.0
 %define		qtver		5.15.2
 %define		kpname		plasma5support
 %define		kf6ver		5.39.0
 
 Summary:	plasma 5 support
 Name:		kp6-%{kpname}
-Version:	6.6.5
-Release:	2
+Version:	6.7.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	38193da75dbc561e3a6e8b2d58f665b7
+# Source0-md5:	13e628c631cb6990a19ebe5d3440729e
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
@@ -33,7 +33,7 @@ BuildRequires:	kf6-kservice-devel >= 5.85.0
 BuildRequires:	kf6-kunitconversion-devel >= 5.82
 BuildRequires:	kf6-networkmanager-qt-devel >= 5.85.0
 BuildRequires:	kf6-solid-devel >= 5.85.0
-BuildRequires:	kp6-libksysguard-devel
+BuildRequires:	kp6-libksysguard-devel >= 6.7.0
 BuildRequires:	kp6-plasma-activities-devel
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
